@@ -1,7 +1,6 @@
 #!/bin/bash
 #SBATCH --nodes=1 # Cores proportional to GPUs: 6 on Cedar, 10 on Béluga, 16 on Graham.
 #SBATCH --gpus-per-node=1
-#SBATCH --partition=compute_full_node
 #SBATCH --output=./outputs/%N-%J.OUT
 #SBATCH --time=0-06:00     # DD-HH:MM:SS
 
