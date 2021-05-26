@@ -1,3 +1,3 @@
 for i in 0 1 2 3; do
-  nohup python train.py --epochs 10 --data coco128.yaml --weights yolov5s.pt --cache --evolve --device $i > evolve_gpu_$i.log &
+  nohup python train.py --img 1920 --batch 16 --epochs 100 --data $SCRATCH/yolov5/data/spaghetti.yaml --cfg $SCRATCH/yolov5/models/yolov5l.yaml --weights "" --cache --evolve --device $i > evolve_gpu_$i.log &
 done
