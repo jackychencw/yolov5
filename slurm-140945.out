@@ -1,0 +1,34 @@
+
+scontrol show jobid 140945
+JobId=140945 JobName=sh
+   UserId=xcliu613(3054447) GroupId=jzu(6000142) MCS_label=N/A
+   Priority=558524 Nice=0 Account=def-yuzou QOS=normal
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=130:0
+   RunTime=00:02:49 TimeLimit=00:15:00 TimeMin=N/A
+   SubmitTime=2021-04-27T20:03:04 EligibleTime=2021-04-27T20:03:04
+   AccrueTime=Unknown
+   StartTime=2021-04-27T20:03:04 EndTime=2021-04-27T20:05:53 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-04-27T20:03:04
+   Partition=compute AllocNode:Sid=mist-login01:4568
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=mist031
+   BatchHost=mist031
+   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=58800M,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=58800M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=(null)
+   WorkDir=/gpfs/fs0/scratch/j/jzu/xcliu613/failure-detection/yolov5
+   Power=
+   TresPerNode=gpu:1
+   MailUser=xcliu613@scinet.local MailType=NONE
+
+sacct -j 140945
+       JobID    JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+140945               sh  def-yuzou   00:02:49                        00:01.047  00:08.347      2:0 
+140945.exte+     extern  def-yuzou   00:02:49     83136K      7360K   00:00:00  00:00.001      0:0 
+140945.0           bash  def-yuzou   00:02:46  15698880K    477056K  00:01.047  00:08.346      2:0 

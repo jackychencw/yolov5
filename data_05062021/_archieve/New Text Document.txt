@@ -1,0 +1,11 @@
+Please label the bounding boxes for filaments (shape like noddles or wires) shown on the printing bed on these 300 pictures. Every picture only has one filament.
+
+The format is YOLO/Text files.  Please put the text file in a new folder and you have to give me back the YOLO/Text files. The class name is "noddle".The class number in the YOLO/Text files must be 0. The text file name must be same as the picture file name.  
+
+The box must be rectangular and extract contain the object. 
+ 
+Tools
+LABELIMG
+
+The picture has been divided into the 3 zip files.
+

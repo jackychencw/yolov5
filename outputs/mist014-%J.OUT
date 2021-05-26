@@ -1,0 +1,37 @@
+
+scontrol show jobid 143556
+JobId=143556 JobName=script.sh
+   UserId=xcliu613(3054447) GroupId=jzu(6000142) MCS_label=N/A
+   Priority=164842 Nice=0 Account=def-yuzou QOS=normal
+   JobState=COMPLETING Reason=TimeLimit Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=06:00:28 TimeLimit=06:00:00 TimeMin=N/A
+   SubmitTime=2021-05-07T00:43:10 EligibleTime=2021-05-07T00:43:10
+   AccrueTime=2021-05-07T00:43:10
+   StartTime=2021-05-07T00:50:56 EndTime=2021-05-07T06:51:24 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-05-07T00:50:56
+   Partition=compute_full_node AllocNode:Sid=mist-login01:76930
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=mist014
+   BatchHost=mist014
+   NumNodes=1 NumCPUs=128 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=128,mem=366000M,node=1,billing=4,gres/gpu=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=366000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)
+   Command=/gpfs/fs0/scratch/j/jzu/xcliu613/yolov5/script.sh
+   WorkDir=/gpfs/fs0/scratch/j/jzu/xcliu613/yolov5
+   StdErr=/gpfs/fs0/scratch/j/jzu/xcliu613/yolov5/./outputs/%N-%J.OUT
+   StdIn=/dev/null
+   StdOut=/gpfs/fs0/scratch/j/jzu/xcliu613/yolov5/./outputs/%N-%J.OUT
+   Power=
+   TresPerNode=gpu:4
+   MailUser=xcliu613@scinet.local MailType=NONE
+
+sacct -j 143556
+       JobID    JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+143556        script.sh  def-yuzou   06:00:28                         01:22:21 1-03:02:46      0:0 
+143556.batch      batch  def-yuzou   06:00:32 634430720K  54310976K   01:22:21 1-03:02:46     0:15 
+143556.exte+     extern  def-yuzou   06:00:28     83136K      5248K   00:00:00   00:00:00      0:0 

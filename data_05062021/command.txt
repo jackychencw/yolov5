@@ -1,0 +1,5 @@
+python train.py --img 1920 --batch 8 --epochs 300 --data '../data.yaml' --cfg ./models/yolov5l.yaml --weights yolov5l
+
+
+python detect.py --weights runs/train/exp6/weights/best.pt --img 736 --conf 0.4 --source "../test/fs_diy_top_images"
+
