@@ -8,5 +8,5 @@ module load cuda/10.2.89 cudnn/7.6.5.32 anaconda3/2019.10 gcc/7.5.0
 source activate pytorch-gpu
 cd $SCRATCH/yolov5
 wandb offline
-python train.py --img 1920 --batch 64 --epochs 100 --data ./data/spaghetti.yaml --cfg ./models/yolov5l.yaml --weights "" --cache --evolve
+python train.py --img 1920 --batch 8 --epochs 100 --data ./data/spaghetti.yaml --hyp ./data/hyp.scratch.yaml --cfg ./models/yolov5l.yaml --weights "" --cache --evolve
 conda deactivate
