@@ -10,6 +10,9 @@ source activate pytorch-gpu
 cd $SCRATCH/yolov5
 wandb offline
 for i in 0 1 2 3; do
-  nohup python train.py --img 1920 --batch 8 --epochs 1000 --data ./data/spaghetti.yaml --hyp ./data/hyp.scratch.yaml --cfg ./models/yolov5l.yaml --weights "" --cache --evolve --device $i > evolve_gpu_$i.log &
+  python train.py --img 1920 --batch 8 --epochs 100 --rect --data ./data/spaghetti.yaml --hyp ./data/hyp.scratch.yaml --cfg ./models/yolov5l.yaml --weights "" --cache --evolve --device $i > evolve_gpu_$i.log &
 done
 conda deactivate
+
+
+python train.py --img 1920 --batch 8 --epochs 100 --rect --data ./data/spaghetti.yaml --hyp ./data/hyp.scratch.yaml --cfg ./models/yolov5l.yaml --weights "" --cache --evolve --device 3 > evolve_gpu_3.log &
